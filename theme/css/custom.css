@@ -1,0 +1,484 @@
+/* General overwrides */
+h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h2 {
+    font: 300 26px/1.7 Roboto, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+a:hover h2 {
+    color: #228896;
+}
+
+h3, h4, h5, h6 {
+  margin: 30px 0 5px 0;
+}
+
+.archive h2 {
+    margin-bottom: 4px;
+}
+
+#fh5co-hero .flexslider .flex-control-nav {
+    bottom: 60px;
+}
+
+/* about */
+.about-image {
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+}
+/* pages overview */
+.overview-link .wrapper .fh5co-feature {
+    margin-bottom: 10px;
+}
+
+.overview-link .wrapper {
+    background: whitesmoke;
+    padding: 20px;
+    margin-bottom: 30px;
+    display:block;
+}
+
+.overview-link:hover .wrapper {
+    background: #fff;
+}
+
+.overview-link .wrapper h3 {
+    margin-top: 10px;
+}
+
+.overview-link p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+/* pages overview */
+
+
+/* some fixes */
+@media screen and (max-width: 768px) {
+    #fh5co-hero .flexslider .slider-text {
+       width: 100%;
+    }
+}
+
+/* search and form */
+.search-field {
+    width: 205px;
+    background: white;
+
+}
+
+.search-submit {
+    font-size: 25px !important;
+    color: white !important;
+    border-radius: 6px;
+    height: 54px;
+    margin-top: -2px;
+}
+
+.search-submit:after, .search-submit:hover:after {
+    visibility: hidden !important;
+}
+
+/* contact form */
+.form-loading {
+    background: whitesmoke;
+    opacity: 0.5;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    display: none;
+}
+
+.form-success {
+  color: #3c763d !important;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: none;
+  font-size: 18px;
+}
+
+.form-error {
+  color: #a94442 !important;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  display: none;
+  font-size: 18px;
+}
+
+.error {
+  border: 2px solid #990000 !important;
+}
+
+#lastname {
+  display: none;
+}
+
+/* laguage navigation */
+.language-navigation li a {
+  color: #aaa !important;
+}
+.language-navigation li a.lang-active, .language-navigation li a:hover {
+  color: #000 !important;
+}
+.language-navigation li a:hover:after {
+  visibility: hidden !important;
+}
+
+
+/* content styling */
+
+.page-content .container, .article-content .container {
+  width: auto !important;
+
+}
+
+.responsive-image {
+  padding: 0;
+}
+
+.responsive-image img {
+  max-width: 100%;
+}
+
+.container.float-left {
+  float: left;
+  padding-left: 0px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+.container.float-right {
+  float: right;
+  padding-right: 0px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+/* 以下オリジナル */
+
+#fh5co-hero .flexslider .slider-text > .slider-text-inner {
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 700px;
+    padding: 2em 0;
+}
+
+#fh5co-aside #fh5co-logo {
+    text-align: center;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 700;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-size: 38px;
+}
+
+.sns_follow{
+    text-align: center;
+    font-size: 22px;
+    margin: 50px 0 -2.1em;
+    color: #494949;
+}
+
+#fh5co-main #mainlp .fh5co-narrow-content {
+    position: relative;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    padding: 4em 0;
+    clear: both;
+}
+
+.front-cont-header{
+    position: relative;
+    padding: 16px 0 24px;
+    background: #3B4552;
+    color: #fff;
+    text-align: center;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.front-cont-header .cont-icon {
+    font-size: 28px;
+}
+
+.front-cont-header .cont-title {
+    font-size: 28px;
+    margin: 0;
+    color: #fff;
+}
+
+.front-cont-header .cont-ruby {
+    font-size: 13px;
+    margin: 0;
+}
+
+.front-cont-header::after {
+    position: absolute;
+    bottom: -18px;
+    z-index: 2000;
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    border-left: 56px solid transparent;
+    border-right: 56px solid transparent;
+    border-top: 18px solid #3B4552;
+}
+
+.c_box {
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+.animate-box:nth-child(2n) .c_box{
+    background-color: #fff;
+}
+.animate-box:nth-child(2n+1) .c_box{
+    background-color: #fafafa;
+}
+
+.wrap {
+    overflow: visible;
+    margin: 0 auto;
+    width:1200px;
+}
+
+.c_title h3{
+    font-size: 16px;
+    margin: 2em 0 1em;
+}
+
+.animate-box:nth-child(2n) .c_box .c_box_inner {
+    float: left;
+    z-index: 10;
+}
+.animate-box:nth-child(2n+1) .c_box .c_box_inner {
+    float: right;
+}
+.c_box_inner {
+    width: 59%;
+    padding-bottom: 32px;
+}
+
+.c_title .c_number {
+    background: #47B39D;
+    color: #fff;
+    display: inline-block;
+    padding: 40px 12px 8px;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+
+.c_title h3 {
+    color: #47B39D;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.c_title .c_english {
+    color: #47B39D;
+    font-size: 13px;
+    margin-bottom: 32px;
+    margin-top: 0;
+}
+
+.animate-box:nth-child(2n+1) .c_box .c_img_box {
+    left: 0;
+    background-position: center top;
+}
+.animate-box:nth-child(2n) .c_img_box {
+    right: 0;
+    background-position: center top;
+}
+.c_img_box {
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.c_text p {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", YuGothic, Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    margin-bottom: 48px;
+    color: #3e3e3e;
+}
+
+.c_text .c_btn a {
+    border-radius: 5px;
+    background: #FF6C00;
+    color: #fff;
+    font-size: 14px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    opacity: 1;
+    display: block;
+    width: 30%;
+    padding: 12px;
+    text-align: center;
+}
+.c_text .c_btn a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1600px){
+.wrap {
+    width: auto;
+    margin: 0 48px;
+}
+}
+
+@media screen and (max-width: 1200px){
+.wrap {
+    width: auto;
+    margin: 0 36px;
+}
+}
+
+@media screen and (max-width: 991px){
+.wrap{
+    width: auto;
+    margin: 0 24px;
+}
+
+.front-cont-header::after {
+    display: none;
+}
+.c_box .c_title {
+    text-align: center;
+}
+.c_box_inner, .animate-box:nth-child(2n+1) .c_box .c_box_inner {
+    width: 100%;
+    float: none;
+}
+.animate-box:nth-child(2n) .c_box .c_img_box, .animate-box:nth-child(2n+1) .c_box .c_img_box{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+}
+
+@media screen and (max-width: 768px){
+.wrap {
+    margin: 0 12px;
+}
+}
+
+.blog-entry .desc .read_more{
+    width: 100%;
+    font-size: 80%;
+    padding: 8px 5px!important;
+}
+
+.banner-footer {
+    width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner-footer img{
+    width:25%;
+    float:left;
+    margin: 0 10px;
+}
+
+#get-in-touch {
+    width: 98%;
+}
+#get-in-touch .row{
+    padding-left: 3%;
+}
+.fh5co-footer > p {
+    text-align: right;
+}
+#get-in-touch p.author{
+    font-size: 1.9vw;
+    font-weight: bold;
+}
+#get-in-touch .fh5co-text > a{
+    font-size: 21px;
+    font-weight: bold;
+}
+@media screen and (max-width: 768px){
+#get-in-touch {
+    width: 95%;
+    margin:0 auto;
+}
+#get-in-touch .row{
+    padding-left: 5%;
+}
+#get-in-touch .row p.author{
+    font-size: 3.4vw;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.fh5co-feature .fh5co-text {
+    padding-left: 120px;
+    width: 100%;
+}
+.fh5co-feature .fh5co-text > a > p{
+    margin-bottom: 0;
+}
+
+}
+@media screen and (max-width: 480px){
+#get-in-touch {
+    width: 95%;
+    margin:0 auto;
+}
+#get-in-touch .row{
+    padding-left: 0%;
+}
+#get-in-touch .row p.author{
+    font-size: 6vw;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.fh5co-feature .fh5co-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: table;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.fh5co-feature .fh5co-text {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+}
+.fh5co-feature .fh5co-text > a > p{
+    margin-bottom: 0;
+}
+
+.banner-footer img{
+    width:100%;
+    margin: 5px auto;
+}
+}
