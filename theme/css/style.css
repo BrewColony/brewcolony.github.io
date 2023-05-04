@@ -140,7 +140,7 @@ figure figcaption {
 }
 
 #fh5co-aside #fh5co-logo img {
-  border-radius: 50%;
+  /*border-radius: 50%; タイトルロゴの枠*/
 
 }
 @media screen and (max-width: 768px) {
