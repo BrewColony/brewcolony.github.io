@@ -788,11 +788,13 @@ body.offcanvas .fh5co-nav-toggle {
 
 #map {
   width: 100%;
-  height: 700px;
+  height: 550px;
+  padding-top: 10px;
+  background-color: white;
 }
 @media screen and (max-width: 768px) {
   #map {
-    height: 200px;
+    height: 550px;
   }
 }
 

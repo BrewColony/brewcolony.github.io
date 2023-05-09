@@ -202,6 +202,7 @@
 		sliderMain();
 		handleForm();
 	});
+
 	//しゅるしゅる動くjs
 	$('a[href^=#]').click(function(){
 		var speed = 500;
@@ -210,6 +211,44 @@
 		var position = target.offset().top;
 		$("html, body").animate({scrollTop:position}, speed, "swing");
 		return false;
+	});
+
+	//ナビゲーションクリックでハイライト移動
+	document.addEventListener("DOMContentLoaded", function () {
+		const navLinks = document.querySelectorAll(".fh5co-main-menu ul li a");
+
+		function changeActiveLink(event) {
+			event.preventDefault();
+			navLinks.forEach((link) => link.parentElement.classList.remove("fh5co-active"));
+			event.target.parentElement.classList.add("fh5co-active");
+		}
+
+		navLinks.forEach((link) => link.addEventListener("click", changeActiveLink));
+	});
+	
+	//スクロール位置に応じてナビゲーションハイライト移動
+	window.addEventListener('scroll', function () {
+		const position = Math.floor(window.innerHeight * 0.75);
+
+		const navLinks = Array.from(document.querySelectorAll(".fh5co-main-menu a[href^='#']")).map(link => {
+			const sectionId = link.getAttribute("href");
+			const section = document.querySelector(sectionId);
+			return { link, section };
+		});
+
+		function updateNavActiveClass() {
+			navLinks.forEach(({ link, section }) => {
+				let sectionTop = section.getBoundingClientRect().top;
+
+				if (sectionTop < position && sectionTop + section.offsetHeight > position) {
+					link.parentElement.classList.add('fh5co-active');
+				} else {
+					link.parentElement.classList.remove('fh5co-active');
+				}
+			});
+		}
+
+		updateNavActiveClass();
 	});
 
 }());
