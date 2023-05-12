@@ -6,6 +6,15 @@
 <html class="no-js"> <!--<![endif]-->
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKXNS02SYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKXNS02SYG');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Brew Colony</title>
@@ -13,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="ビール沼にハマった生き物たちが織りなす愉快なビアライフ「Brew Colony」" />
-    <meta name="author" content="" />
+    <meta name="author" content="服部佑" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
@@ -60,32 +69,22 @@
             </h1>
             <nav class="fh5co-main-menu" role="navigation">
                 <ul>
-                    <li><a href="#fh5co-hero">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href='#aboutus'>About us</a></li>
                     <li><a href='#beer'>Beer</a></li>
-                    <li><a href='#newcomer'>Merchandise</a></li>
+                    <li><a href='#merchandise'>Merchandise</a></li>
                     <li><a href='#membership'>沼 Membership</a></li>
-                    <li><a href='#map1'>Access</a></li>
+                    <li><a href='#access'>Access</a></li>
                     <li><a href='#news'>News</a></li>
                 </ul>
             </nav>
-
-            <div class="sns_follow">SNSでフォローしよう！</div>
-
-            <ul id="social">
-                <li><a href="https://www.facebook.com" alt="Facebook"><i class="icon-facebook2"></i></a></li>
-
-                <li><a href="https://www.twitter.com" alt="Twitter"><i class="icon-twitter2"></i></a></li>
-
-                <li><a href="https://www.instagram.com/brew_colony_nasukarasuyama/" alt="Instagram"><i
-                            class="icon-instagram"></i></a></li>
-
-            </ul>
+            <!--SNS部分共通化。編集はmainn.jsを修正すること-->
+            <div id="common-sns"></div>
         </aside>
 
         <div id="fh5co-main">
             <aside id="fh5co-hero" class="js-fullheight">
-                <div class="flexslider js-fullheight">
+                <div id="home" class="flexslider js-fullheight">
                     <ul class="slides">
                         <li style="background-image: url(/images/hero/karappu.png);"> <!--HeroってHが大文字だった-->
                             <div class="overlay"></div>
@@ -148,7 +147,8 @@
                                         <div class="slider-text-inner">
                                             <h1>私たちのビジョン</h1>
 
-                                            <h2>私たちのビジョンは、工業化された食品とコピー文化が蔓延する現代のグローバル社会において、オリジナルの文化を大切に育んでいくことです。心から楽しめる環境を提供し、交流が生まれる場所を創造します。美味しいビールを通じて、仲間とのつながりを深め、世界中から誇れる場所を目指します。一緒に、未来の文化を築いていきましょう。</h2>
+                                            <h2>私たちのビジョンは、工業化された食品とコピー文化が蔓延する現代のグローバル社会において、オリジナルの文化を大切に育んでいくことです。心から楽しめる環境を提供し、交流が生まれる場所を創造します。美味しいビールを通じて、仲間とのつながりを深め、世界中から誇れる場所を目指します。一緒に、未来の文化を築いていきましょう。
+                                            </h2>
                                             <p>
                                                 <a class="btn btn-primary" href="#aboutus">
                                                     <i class="icon-code"></i>
@@ -185,7 +185,8 @@
                                             style="background-image:url(/images/hero/background-1.jpg)"></div>
                                         <div class="c_text">
                                             <h4></h4>
-                                            <p>2008年、アメリカをバックパッカーとして旅した際、グランドキャニオンのキャンプサイトで飲んだ一杯のビールが私たちの人生を変えました。大自然の圧倒的な美しさと共に、アメリカンビールの香りの良さ、豊かな味わいに魅了されました。旅を続けて分かったこと、それは、そこには多種多様なビールが存在し、それらが、日常の中に溶け込み、皆でビールを楽しむ文化が存在しているという事でした。それと同時に、それは私の中で夢、目標となりその時経験した感動を、また、ビールを楽しむ環境をみんなと共有したいと思うようになりました。ここ那須烏山市にはビールに活用できる豊富な素材がたくさんあることがわかりました。とはいえ現在それを魅力的な商品として提供する事業者はいないということもわかってきました。それらをひと瓶のクラフトビールとしてお客様に那須烏山の豊かさを感じてもらうことはできないか、そう考えるようになりました。そしてもっとたくさんの人にビールの自由さやおいしさを気軽に感じてもらいたい、栃木県東部からクラフトビールの文化を醸成したい、地方から世界に発信できる農産物加工品を作り地域を豊かにしたい、そしてなにより私たちがビールをさらに深く追求したいという思いから製造を始める決心をしました。</p>
+                                            <p>2008年、アメリカをバックパッカーとして旅した際、グランドキャニオンのキャンプサイトで飲んだ一杯のビールが私たちの人生を変えました。大自然の圧倒的な美しさと共に、アメリカンビールの香りの良さ、豊かな味わいに魅了されました。旅を続けて分かったこと、それは、そこには多種多様なビールが存在し、それらが、日常の中に溶け込み、皆でビールを楽しむ文化が存在しているという事でした。それと同時に、それは私の中で夢、目標となりその時経験した感動を、また、ビールを楽しむ環境をみんなと共有したいと思うようになりました。ここ那須烏山市にはビールに活用できる豊富な素材がたくさんあることがわかりました。とはいえ現在それを魅力的な商品として提供する事業者はいないということもわかってきました。それらをひと瓶のクラフトビールとしてお客様に那須烏山の豊かさを感じてもらうことはできないか、そう考えるようになりました。そしてもっとたくさんの人にビールの自由さやおいしさを気軽に感じてもらいたい、栃木県東部からクラフトビールの文化を醸成したい、地方から世界に発信できる農産物加工品を作り地域を豊かにしたい、そしてなにより私たちがビールをさらに深く追求したいという思いから製造を始める決心をしました。
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -206,7 +207,8 @@
                                             <h4></h4>
                                             <p>私たちは、美味しいビールを作ることで、お客様に楽しいひと時を提供します。
 
-                                                ビール沼に住むみんなにビールを届けるため、私たちは、伝統的な製法と心躍る実験を楽しみながらビールを作ります。できたビールはバレルに詰め込み、最後に時間という魔法をかけます。ビール沼のみんなは、この魔法のかかったビールが大好きです。</p>
+                                                ビール沼に住むみんなにビールを届けるため、私たちは、伝統的な製法と心躍る実験を楽しみながらビールを作ります。できたビールはバレルに詰め込み、最後に時間という魔法をかけます。ビール沼のみんなは、この魔法のかかったビールが大好きです。
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -288,8 +290,8 @@
                                             <h3>Reviathan</h3>
                                             <p class="c_english">DDH DIPA</p>
                                         </div>
-                                        <div class="c_img_box"
-                                            style="background-image:url(/images/hero/Reviathan.png)"></div>
+                                        <div class="c_img_box" style="background-image:url(/images/hero/Reviathan.png)">
+                                        </div>
                                         <div class="c_text">
                                             <h4></h4>
                                             <p>銚子ビールとのコラボビール</p>
@@ -299,7 +301,7 @@
                             </section>
                         </div>
                     </div>
-                    <div id="newcomer">
+                    <div id="merchandise">
                         <header class="row front-cont-header">
                             <div class="animate-box" data-animate-effect="fadeInLeft">
                                 <div class="cont-icon"><i class=""></i></div>
@@ -359,118 +361,54 @@
                             </section>
                         </div>
                     </div>
-                    <div id="map1">
+                    <div id="access">
                         <header class="row front-cont-header">
                             <div class="animate-box" data-animate-effect="fadeInLeft">
                                 <div class="cont-icon"><i class=""></i></div>
-                                <h2 class="cont-title">TASTING ROOM</h2>
+                                <h2 class="cont-title">ACCESS</h2>
                                 <p class="cont-ruby"></p>
-                     </header>
-            </div>
-            <!--地図-->
-            <div id="map" class="fh5co-feature fh5co-feature-sm animate-box" data-animate-effect="fadeInLeft">
-            <iframe src="https://storage.googleapis.com/maps-solutions-090m13oo0x/locator-plus/2grx/locator-plus.html" width="100%" height="100%" style="border:3px;" loading="lazy">
-            </iframe>
-            </div>
-            <!--news-->
-            <div class="fh5co-narrow-content" id="news">
-                <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">News</h2>
-                <div class="row row-bottom-padded-md">
-                    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                        <div class="blog-entry">
-                            <a href="/article/polca/" class="blog-img">
-                                <img src="/images/polca.jpg" class="img-responsive" alt="「Polca」にてクラウドファンディングはじめました！">
-                            </a>
-                            <div class="desc">
-                                <h3 class="mH_tit"><a href="/article/polca/">ooo！</a></h3>
-                                <span><small>20XX-XX-30(土)</small></span>
-                                <span class="mH_aut_and_cat"><small>misc</small></span>
-                                <p class='mH_sum'>...</p>
-                                <a href="/article/polca/" class="btn btn-primary read_more">Read more <i
-                                        class="icon-arrow-right3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                        <div class="blog-entry">
-                            <a href="/article/first-post/" class="blog-img">
-                                <img src="/images/hero/background-2.jpg" class="img-responsive" alt="那須烏山産はちみつはいかに">
-                            </a>
-                            <div class="desc">
-                                <h3 class="mH_tit"><a href="/article/first-post/">ハニーエール</a></h3>
-                                <span><small>2023-06-26(火)</small></span>
-                                <span class="mH_aut_and_cat"><small>misc</small></span>
-                                <p class='mH_sum'>2023山あげ祭りでリリース予定！！</p>
-                                <a href="/article/first-post/" class="btn btn-primary read_more">Read more <i
-                                        class="icon-arrow-right3"></i></a>
-                            </div>
+                        </header>
+                        <div class="animate-box" data-animate-effect="fadeInLeft">
+                            <section class="c_box row">
+                                <iframe
+                                    src="https://storage.googleapis.com/maps-solutions-090m13oo0x/locator-plus/2grx/locator-plus.html"
+                                    class="googlemap" loading="lazy">
+                                </iframe>
+                            </section>
                         </div>
                     </div>
                 </div>
-
-                <div class="fh5co-footer">
-                    <div class="float-clear">
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                                    <p class="author">ロゴの由来！</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-md-offset-3 col-md-pull-3 animate-box"
-                                    data-animate-effect="fadeInLeft">
-                                    <div class="wrapper">
-                                        <div class="fh5co-feature">
-                                            <div class="fh5co-icon">
-                                                <a href="/pages/about.html"><img class="about-image"
-                                                        src="/images/pages/logo.jpeg" /></a>
-                                            </div>
-
-                                            <div class="fh5co-text">
-                                                <a href="/pages/about.html">
-                                                    <p>イベント</p>
-                                                </a>
-
-                                                <p>山あげで登場</p>
-
-                                                <p><a href="/pages/about.html"
-                                                        class="btn btn-primary contact-btn">詳しくみる</a></p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="banner-footer">
-                            <a href="http://park18.wakwak.com/~omotenashi/"><img
-                                    src="/images/banner/nasukarasuyama_kankokyokai.jpg" alt="那須烏山市観光協会"></a>
-                            <a href="http://park18.wakwak.com/~omotenashi/"><img
-                                    src="/images/banner/nasukarasuyama_kankokyokai.jpg" alt="那須烏山市観光協会"></a>
-                            <a href="http://park18.wakwak.com/~omotenashi/"><img
-                                    src="/images/banner/nasukarasuyama_kankokyokai.jpg" alt="那須烏山市観光協会"></a>
-                        </div>
+                <!--news-->
+                <div id="news" class="fh5co-narrow-content">
+                    <div class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">
+                        <h2>News</h2>
+                        <p><a href="/article/index.html">>>記事一覧へ</a></p>
+                    </div>
+                    <div class="row row-bottom-padded-md">
+                        <!--news.jsで上位３つのタイルのみを自動生成-->
+                        <div id="blog-entries"></div>
                     </div>
 
-                    <p><small>&copy; 2023 Brew Colony. All Rights Reserved.</span></p>
+                    <!--Footer-->
+                    <div id="footer-container"></div>
 
                 </div>
             </div>
-        </div>
 
-        <!-- jQuery -->
-        <script src="/theme/js/jquery.min.js"></script>
-        <!-- jQuery Easing -->
-        <script src="/theme/js/jquery.easing.1.3.js"></script>
-        <!-- Bootstrap -->
-        <script src="/theme/js/bootstrap.min.js"></script>
-        <!-- Waypoints -->
-        <script src="/theme/js/jquery.waypoints.min.js"></script>
-        <!-- Flexslider -->
-        <script src="/theme/js/jquery.flexslider-min.js"></script>
-        <!-- MAIN JS -->
-        <script src="/theme/js/main.js"></script>
+            <!-- jQuery -->
+            <script src="/theme/js/jquery.min.js"></script>
+            <!-- jQuery Easing -->
+            <script src="/theme/js/jquery.easing.1.3.js"></script>
+            <!-- Bootstrap -->
+            <script src="/theme/js/bootstrap.min.js"></script>
+            <!-- Waypoints -->
+            <script src="/theme/js/jquery.waypoints.min.js"></script>
+            <!-- Flexslider -->
+            <script src="/theme/js/jquery.flexslider-min.js"></script>
+            <!-- 自作 JS -->
+            <script src="/theme/js/main.js"></script>
+            <script src="/theme/js/news.js"></script>
+            <script src="/theme/js/common.js"></script>
 </body>
 
 </html>

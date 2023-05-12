@@ -1,9 +1,5 @@
 ;(function () {
-
 	'use strict';
-
-
-
 	var isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);
@@ -37,7 +33,6 @@
 	};
 
 	// Animations
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
@@ -73,7 +68,6 @@
 
 		} , { offset: '85%' } );
 	};
-
 
 	var burgerMenu = function() {
 
@@ -144,7 +138,6 @@
 	  	});
 
 	};
-
 
 	var handleForm = function() {
 		$("#contact-form").on("submit", function() {
@@ -218,7 +211,7 @@
 		const navLinks = document.querySelectorAll(".fh5co-main-menu ul li a");
 
 		function changeActiveLink(event) {
-			event.preventDefault();
+			//event.preventDefault();
 			navLinks.forEach((link) => link.parentElement.classList.remove("fh5co-active"));
 			event.target.parentElement.classList.add("fh5co-active");
 		}

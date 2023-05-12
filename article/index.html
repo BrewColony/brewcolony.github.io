@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKXNS02SYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BKXNS02SYG');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>記事一覧</title> <!--記事のタイトルを書く-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="" />
+    <meta name="description" content="ディスクリプション" /> <!--何の記事なのか簡潔に要約-->
+    <meta name="keywords" content="キーワード１,キーワード２,,,"> <!--関連する単語。複数設定可-->
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:site_name" content="Brew Colony" />
+    <meta property="og:title" content="タイトル" /> <!--タイトルと同じ-->
+    <meta property="og:description" content="ディスクリプション" /> <!--ディスクリプションと同じ-->
+    <meta property="og:url" content="/article/templete/" /> <!--このindex.htmlが入ってるフォルダに書き換え-->
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="20yy-MM-dd hh:mm:ss+09:00" /> <!--記事のアップロード時刻-->
+    <meta property="article:modified_time" content="" />
+    <meta property="article:author" content="/author/.html">
+    <meta property="article:section" content="カテゴリ" /> <!--この記事のカテゴリ-->
+    <meta property="og:image" content="/sample.jpg"> <!--この記事の画像に変更-->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="/theme/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/theme/css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="/theme/css/flexslider.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/theme/css/style.css">
+    <!-- Custom style  -->
+    <link rel="stylesheet" href="/theme/css/custom.css">
+    <!-- pygments code highlight -->
+    <link rel="stylesheet" href="/theme/css/pygments.css">
+    <!-- tipue search -->
+    <link rel="stylesheet" href="/theme/tipuesearch/css/tipuesearch.css">
+    <link rel="stylesheet" href="/theme/css/origin.css">
+    <!-- Modernizr JS -->
+    <script src="/theme/js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="/theme/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="fh5co-page">
+        <div class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></div>
+        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+            <nav class="fh5co-main-menu" role="navigation">
+            </nav>
+            <div class="clearfix"></div>
+            <h1 id="fh5co-logo">
+                <a href="/index.html">
+                    <img src="/images/logo.png" />
+                </a>
+            </h1>
+            <nav class="fh5co-main-menu" role="navigation">
+                <ul>
+                    <li class="fh5co-active"><a href="">記事一覧</a></li>
+                    <li><a href="/index.html">HOMEに戻る</a></li>
+                </ul>
+            </nav>
+            <!--SNS部分共通化。編集はmainn.jsを修正すること-->
+            <div id="common-sns"></div>
+        </aside>
+
+        <div id="fh5co-main">
+
+            <div class="fh5co-narrow-content article-content">
+                <h1 class="fh5co-heading-colored">記事一覧</h1>
+                <div class="row row-bottom-padded-md">
+                    <!--news.jsでタイルを自動生成。上位３つにはNewのラベルがつく-->
+                    <div id="blog-entries"></div>
+                </div>
+            </div>
+            <!--Footer-->
+            <div id="footer-container"></div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/theme/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="/theme/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="/theme/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="/theme/js/jquery.flexslider-min.js"></script>
+
+    <!-- 自作 JS -->
+    <script src="/theme/js/main.js"></script>
+    <script src="/theme/js/common.js"></script>
+    <script src="/theme/js/news.js"></script>
+</body>
+
+</html>
