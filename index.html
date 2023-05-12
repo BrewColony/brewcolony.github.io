@@ -25,6 +25,9 @@
     <meta name="author" content="服部佑" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="/theme/css/animate.css">
@@ -50,8 +53,6 @@
     <script src="/theme/js/respond.min.js"></script>
     <![endif]-->
 
-
-
 </head>
 
 <body>
@@ -63,19 +64,28 @@
             </nav>
             <div class="clearfix"></div>
             <h1 id="fh5co-logo">
-                <a href="/index.html">
+                <a href="/">
                     <img src="/images/logo.png" />
                 </a>
             </h1>
             <nav class="fh5co-main-menu" role="navigation">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href='#aboutus'>About us</a></li>
-                    <li><a href='#beer'>Beer</a></li>
-                    <li><a href='#merchandise'>Merchandise</a></li>
-                    <li><a href='#membership'>沼 Membership</a></li>
-                    <li><a href='#access'>Access</a></li>
-                    <li><a href='#news'>News</a></li>
+                    <li class="accordion-item">
+                        <a href="#home"><i class="fas fa-chevron-right accordion-arrow"></i> HOME</a>
+                        <ul class="submenu">
+                            <li><a href='#aboutus'>About us</a></li>
+                            <li><a href='#beer'>Beer</a></li>
+                            <li><a href='#merchandise'>Merchandise</a></li>
+                            <li><a href='#membership'>沼 Membership</a></li>
+                            <li><a href='#access'>Access</a></li>
+                        </ul>
+                    </li>
+                    <li class="accordion-item">
+                        <a href="/article/">NEWS</a>
+                    </li>
+                    <li class="accordion-item">
+                        <a href="/contact/">Contact us</a>
+                    </li>
                 </ul>
             </nav>
             <!--SNS部分共通化。編集はmainn.jsを修正すること-->
@@ -378,20 +388,24 @@
                         </div>
                     </div>
                 </div>
-                <!--news-->
-                <div id="news" class="fh5co-narrow-content">
-                    <div class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">
-                        <h2>News</h2>
-                        <p><a href="/article/index.html">>>記事一覧へ</a></p>
-                    </div>
-                    <div class="row row-bottom-padded-md">
-                        <!--news.jsで上位３つのタイルのみを自動生成-->
-                        <div id="blog-entries"></div>
-                    </div>
 
+                <div class="fh5co-narrow-content">
+                    <!--news-->
+                    <div id="news">
+                        <div class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">
+                            <h2 style="margin: 0;">Latest News</h2>
+                        </div>
+                        <div class="row row-bottom-padded-md">
+                            <!--news.jsで上位３つのタイルのみを自動生成-->
+                            <div id="top-three-blog-entries">
+                            </div>
+                            <div class="all-article">
+                                <p style="margin: 0;"><a href="/article/">>>過去の記事を読む</a></p>
+                            </div>
+                        </div>
+                    </div>
                     <!--Footer-->
                     <div id="footer-container"></div>
-
                 </div>
             </div>
 
@@ -406,9 +420,9 @@
             <!-- Flexslider -->
             <script src="/theme/js/jquery.flexslider-min.js"></script>
             <!-- 自作 JS -->
-            <script src="/theme/js/main.js"></script>
             <script src="/theme/js/news.js"></script>
             <script src="/theme/js/common.js"></script>
+            <script src="/theme/js/main.js"></script>
 </body>
 
 </html>

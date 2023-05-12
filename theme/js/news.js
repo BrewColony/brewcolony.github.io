@@ -1,23 +1,55 @@
-const blogData = [
-    {
-        imageSrc: "/images/polca.jpg",
-        pageLink: "/article/templete/",
-        altText: "テンプレートです",
-        title: "テンプレート",
-        date: "20yy-MM-dd",
-        category: "新商品",
-        summary: "テンプレートです",
-    },
-    // 記事が増えたら下に"{~~},"の範囲を追加
-    
-];
+    const blogData = [
+        {
+            imageSrc: "/images/polca.jpg",
+            pageLink: "/article/templete/",
+            altText: "テンプレートです",
+            title: "テンプレート",
+            date: "20yy-MM-dd",
+            category: "新商品",
+            summary: "テンプレートです",
+        }, {
+            imageSrc: "/images/polca.jpg",
+            pageLink: "/article/templete/",
+            altText: "テンプレートです",
+            title: "テンプレート",
+            date: "20yy-MM-dd",
+            category: "新商品",
+            summary: "テンプレートです",
+        }, {
+            imageSrc: "/images/polca.jpg",
+            pageLink: "/article/templete/",
+            altText: "テンプレートです",
+            title: "テンプレート",
+            date: "20yy-MM-dd",
+            category: "新商品",
+            summary: "テンプレートです",
+        }, {
+            imageSrc: "/images/polca.jpg",
+            pageLink: "/article/templete/",
+            altText: "テンプレートです",
+            title: "テンプレート",
+            date: "20yy-MM-dd",
+            category: "新商品",
+            summary: "テンプレートです",
+        }, {
+            imageSrc: "/images/polca.jpg",
+            pageLink: "/article/templete/",
+            altText: "テンプレートです",
+            title: "テンプレート",
+            date: "20yy-MM-dd",
+            category: "新商品",
+            summary: "テンプレートです",
+        },
+        // 記事が増えたら下に"{~~},"の範囲を追加
 
-//newsタイル生成(全て)
-function createBlogEntryHTML(entry, index) {
-    const newLabelHTML = index <= 2 ? `<span class="new-label">NEW</span>` : "";
+    ];
 
-    return `
-    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+    //newsタイル生成
+    function createBlogEntryHTML(entry, index) {
+        const newLabelHTML = index <= 2 ? `<span class="new-label">NEW</span>` : "";
+
+        return `
+    <div class="col-md-4 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
       <div class="blog-entry">
         <a href="${entry.pageLink}" class="blog-img">
           ${newLabelHTML}
@@ -32,26 +64,24 @@ function createBlogEntryHTML(entry, index) {
         </div>
       </div>
     </div>`;
-}
+    }
+    const blogEntriesContainer = document.getElementById("blog-entries");
+    const topThreeBlogEntriesContainer = document.getElementById("top-three-blog-entries");
 
-const blogEntriesContainer = document.getElementById("blog-entries");
-let blogEntriesHTML = "";
-for (const [index, entry] of blogData.entries()) {
-    blogEntriesHTML += createBlogEntryHTML(entry, index);
-}
-blogEntriesContainer.innerHTML = blogEntriesHTML;
-
-//記事タイル生成(上位３つのみ)
-function createTopThreeBlogEntriesHTML(blogData) {
-    const topThreeEntries = blogData.slice(0, 3);
-    let topThreeEntriesHTML = '';
-
-    for (const [index, entry] of topThreeEntries.entries()) {
-        topThreeEntriesHTML += createBlogEntryHTML(entry, index);
+    if (blogEntriesContainer) {
+        let blogEntriesHTML = "";
+        for (const [index, entry] of blogData.entries()) {
+            blogEntriesHTML += createBlogEntryHTML(entry, index);
+        }
+        blogEntriesContainer.innerHTML = blogEntriesHTML;
     }
 
-    return topThreeEntriesHTML;
-}
+    if (topThreeBlogEntriesContainer) {
+        const topThreeEntries = blogData.slice(0, 3);
+        let topThreeEntriesHTML = '';
 
-const topThreeBlogEntriesContainer = document.getElementById("top-three-blog-entries");
-topThreeBlogEntriesContainer.innerHTML = createTopThreeBlogEntriesHTML(blogData);
+        for (const [index, entry] of topThreeEntries.entries()) {
+            topThreeEntriesHTML += createBlogEntryHTML(entry, index);
+        }
+        topThreeBlogEntriesContainer.innerHTML = topThreeEntriesHTML;
+    }

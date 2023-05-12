@@ -186,16 +186,6 @@
 		});
 	};
 
-	// Document on load.
-	$(function(){
-		fullHeight();
-		contentWayPoint();
-		burgerMenu();
-		mobileMenuOutsideClick();
-		sliderMain();
-		handleForm();
-	});
-
 	//しゅるしゅる動くjs
 	$('a[href^=#]').click(function(){
 		var speed = 500;
@@ -212,16 +202,16 @@
 
 		function changeActiveLink(event) {
 			//event.preventDefault();
-			navLinks.forEach((link) => link.parentElement.classList.remove("fh5co-active"));
-			event.target.parentElement.classList.add("fh5co-active");
+			navLinks.forEach((link) => link.classList.remove("fh5co-active"));
+			event.target.classList.add("fh5co-active");
 		}
 
 		navLinks.forEach((link) => link.addEventListener("click", changeActiveLink));
 	});
-	
+
 	//スクロール位置に応じてナビゲーションハイライト移動
 	window.addEventListener('scroll', function () {
-		const position = Math.floor(window.innerHeight * 0.75);
+		const position = Math.floor(window.innerHeight * 0.55);
 
 		const navLinks = Array.from(document.querySelectorAll(".fh5co-main-menu a[href^='#']")).map(link => {
 			const sectionId = link.getAttribute("href");
@@ -230,18 +220,41 @@
 		});
 
 		function updateNavActiveClass() {
+			let activeSection = null;
+
 			navLinks.forEach(({ link, section }) => {
 				let sectionTop = section.getBoundingClientRect().top;
 
+				// 最も近いセクションを検索
 				if (sectionTop < position && sectionTop + section.offsetHeight > position) {
-					link.parentElement.classList.add('fh5co-active');
+					if (activeSection === null || Math.abs(sectionTop - position) < Math.abs(activeSection.sectionTop - position)) {
+						activeSection = { link, sectionTop };
+					}
+				}
+			});
+
+			// アクティブクラスを適切な要素に設定
+			navLinks.forEach(({ link }) => {
+				if (link === activeSection.link) {
+					link.classList.add('fh5co-active');
 				} else {
-					link.parentElement.classList.remove('fh5co-active');
+					link.classList.remove('fh5co-active');
 				}
 			});
 		}
-
 		updateNavActiveClass();
 	});
+
+
+	// Document on load.
+	$(function () {
+		fullHeight();
+		contentWayPoint();
+		burgerMenu();
+		mobileMenuOutsideClick();
+		sliderMain();
+		handleForm();
+	});
+
 
 }());

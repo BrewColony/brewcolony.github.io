@@ -27,7 +27,7 @@ const footerData = {
         text1: "お気軽に連絡ください",
         text2: "質問、コラボレーションなんでもどうぞ",
         buttonText: "連絡する",
-        buttonLink: "/pages/about.html",
+        buttonLink: "/contact/",
     },
     bannerFooter: [
         {
