@@ -1242,13 +1242,13 @@ body.offcanvas .fh5co-nav-toggle {
     }
 }
 
-.all-article p {
-  padding: 15px 6% 15px 6%;
-    background-color: #228896;
+.all-article a p {
+  font-size: 1.0em;
+  margin:  15px;
 }
 
-.all-article p a{
-      font-size: 1.0em;
+.all-article a{
+        background-color: #228896;
       color: white;
 }
 
