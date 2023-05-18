@@ -68,6 +68,8 @@
 
 		} , { offset: '85%' } );
 	};
+	// Add contentWayPoint to the global scope
+	window.contentWayPoint = contentWayPoint;
 
 	var burgerMenu = function() {
 
