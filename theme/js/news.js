@@ -1,6 +1,6 @@
     const blogData = [
         {
-            imageSrc: "/images/polimages/hero/yoruichi_poster.jpg",
+            imageSrc: "https://brewcolony.github.io/images/hero/yoruichi_poster.jpg",
             pageLink: "/article/20230802/",
             altText: "黒磯日用夜市",
             title: "黒磯日用夜市",
